@@ -1,0 +1,34 @@
+#A sequence is an ordered set of items
+#"Hello World" contains 11 intems, and each item is a character, thus it is an ordered set of items
+
+#A list such as the one below is a sequence type
+# A sequence is a list of strings, each item is considered a sequence as well,
+# a list is comprised of multiple sequences within a sequence
+#since a sequence is ordered, we can use indexes to access individual items in the sequence.
+computer_parts = ["pc", "mouse", "monitor"]
+computer_parts[1]  # this is the string mouse bc it is index[1]
+
+#recall that you can obtain values from an index of a sequence as well as shown below
+print(computer_parts[0][1])  # this should produce the letter c
+print(computer_parts[2][-3:-6:-1])  #tin
+
+#this sequence type can be multiplied and concatenated but some sequence types can't be concatenated like ranges
+string1 = "he's "
+string2 = "probably "
+string3 = "pining "
+string4 = "for the "
+string5 = "fjords "
+print(string1 + string2 + string3 + string4 + string5)
+print("he's " "probably " "pining " "for the " "fjords ")
+
+#strings can be multiplied, this prints Hello 5 times on the same line
+print("Hello " * 5)
+
+print("Hello " * (5 + 4))
+print("Hello" * 5 + " 4")
+
+today = "friday"
+print("day" in today)  #since day is in today, it prints true
+print("fri" in today) #since fri is in today, it prints true
+print("thurs" in today) #since thurs isn't in today, it prints false
+print("parrot" in "fjord") #since parrot isn't in fjord, it prints false
