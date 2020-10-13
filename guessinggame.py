@@ -1,6 +1,6 @@
 import random
 
-highest = 10
+highest = 10 #this sets 10 guesses 
 answer = random.randint(1, highest)
 print(answer)   # TODO: Remove after testing
 guess = 0 # initialize to any number that can't equal the number
