@@ -48,3 +48,9 @@ for i in range(multiplier): #here we are getting adding 5, 1-8 times, getting 40
     answer += number #here were using augmented assignment to add the number to the aswer
  
 print(answer) #after 8 5's have been added, printing answer will print: 40
+
+# tabbed_string
+
+#be careful when refacturing code to fit a style guide,
+# you may need to make sure nothing gets lost in the process
+#refactoring changes how something works not what it does. 
