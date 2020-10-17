@@ -59,9 +59,41 @@ flower = "blue violet"
 print('blue' in flower)
 
 
-
+# add flowers to flower array and shrubs to shrub array
 #If flower and colour are defined as:
 flower = "rose"
 colour = "red"
 #Which of these lines will correctly print: The rose is red
-print("The {0} is {1}".format(flower,colour))
+print("The {0} is {1}".format(flower, colour))
+
+data = [
+    "Andromeda - Shrub",
+    "Bellflower - Flower",
+    "China Pink - Flower",
+    "Daffodil - Flower",
+    "Evening Primrose - Flower",
+    "French Marigold - Flower",
+    "Hydrangea - Shrub",
+    "Iris - Flower",
+    "Japanese Camellia - Shrub",
+    "Lavender - Shrub",
+    "Lilac- Shrub",
+    "Magnolia - Shrub",
+    "Peony - Shrub",
+    "Queen Anne's Lace - Flower",
+    "Red Hot Poker - Flower",
+    "Snapdragon - Flower",
+    "Sunflower - Flower",
+    "Tiger Lily - Flower",
+    "Witch Hazel - Shrub",
+]
+
+flowers = []
+shrubs = []
+
+# write your code here
+for item in data:
+    if 'Flower' in item:
+        flowers.append(item)
+    elif 'Shrub' in item:
+        shrubs.append(item) 
