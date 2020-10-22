@@ -9,6 +9,7 @@ print(computer_parts[0:3])  #slicing only prints out an array including computer
 
 print(computer_parts[-1])  #here slicing prints out mouse mat
 
+computer_parts[3:]=["trackball"]
 # strings are immutable, meaning they cannot be changed
 # lists on the other hand are mutable and they can be changed
 

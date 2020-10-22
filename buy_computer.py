@@ -9,10 +9,21 @@ computer_parts = []  #creating an empty list
 
 while current_choice != '0':
     if current_choice in valid_choices:
-        print("Adding {}".format(current_choice))
+      
         index = int(current_choice) - 1
+        # To check if the part is already in their list we do the following below
+        # To remove an item from a list use s.remove(x), removing the first item from s where s[i] = x
+        # removing the value that has a matching index, if no matching value you get a ValueError
         chosen_part = available_parts[index]
-        computer_parts.append(chosen_part)
+        # if an item like a monitor is already within the list, when entering the # for monitor again, remove monitor.
+        # so pressing 2 adds or appends the monitor, pressing 2 again removes it
+        if chosen_part in computer_parts:
+            # Since here we checked if chosen_parts was in the list we won't get an error when removing.
+            print("Removing {}".format(current_choice))
+            computer_parts.remove(chosen_part)
+        else:
+            computer_parts.append(chosen_part)
+        print("Your list now contains: {}".format(computer_parts))
         # if current_choice == "1":
         #     computer_parts.append("computer")
         # elif current_choice == "2":
