@@ -31,3 +31,6 @@ while guess != answer:
             print("Well done, you guessed it")
         else:
             print("Sorry, you have not guessed correctly")
+
+# Documentation is crucial in coding, it allows other developers to build
+# off of your work rather than having to recreate it.

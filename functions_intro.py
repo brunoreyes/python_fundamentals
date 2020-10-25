@@ -18,10 +18,11 @@ def is_palindrome(string):
     return string[::-1].casefold() == string.casefold()  #this is a condensed version of the two lines above
     #remember with . methods have the parentheses at the end like: .casefold()
 
+    # Make sure if a function is meant to return a value, expicitely use use the return keyword
 
 # word = input("Please enter a word to check: ")
 # if is_palindrome(word):
-#     print("'{}' is a palindrome".format(word))
+#     print("'{}' is a palindrome".format(word)
 # else:
 #     print("'{}' is not a palindrome".format(word))
 
