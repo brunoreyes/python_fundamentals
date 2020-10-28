@@ -17,19 +17,22 @@ print(RED, "this will be in red")
 print(MAGENTA, 'this will print in magenta')
 print("this is now magenta because the changes we made to color will stay enabled until disabled")
 
-def colour_print(text: str, effect: str) -> None:
+def colour_print(text: str, *effects: str) -> None: #changed effect to *effects to add multiple
     """
     Print `text` usnging the ANSI sequences to change colour, etc.
 
     :param test: The text to print. 
-    :param effect: The effect we want. One of the constants
+    :param effects: The effect we want. One of the constants
         defuned at the start of this module.
     """
-    output_string = "{0}{1}{2}".format(effect, text, RESET)
+    effect_string = "".join(effects) #effects is a tuple containing # of ANSY strings
+    output_string = "{0}{1}{2}".format(effect_string, text, RESET)
     print(output_string)
 
 
 colour_print("Hello, Red", RED)
+colour_print("Hello, Red Bold", RED, BOLD)
+colour_print("Hello, Blue-reversed-underline-bold", BLUE, BOLD, UNDERLINE, REVERSE)
 # test that the colur was reset
 print("This should be in the default terminal colour")
 
