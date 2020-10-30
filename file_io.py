@@ -20,18 +20,18 @@
 # "with" closes files even if there's an error reading file.
 # "open", by itself (without "with") doesn't close if there's an error reading the file
 
-# with open("sample.txt", 'r') as jabber:
+# with open("sample_python_text_file_in_folder.txt", 'r') as jabber:
 #     for line in jabber:
 #         if "JAB" in line.upper():
 #             print(line, end='')
 #
-# with open("sample.txt", 'r') as jabber:
-#     line = jabber.readline() # .readline() reads each line of a file and returns a string for each line
+# with open("sample_python_text_file_in_folder.txt", 'r') as jabber:
+#     line = jabber.readline() # .readline() reads a line of a file and returns a string for the line read
 #     while line:
 #         print(line, end='')
 #         line = jabber.readline()
 
-# with open("sample.txt", 'r') as jabber:
+# with open("sample_python_text_file_in_folder.txt", 'r') as jabber:
 #     lines = jabber.readlines()
 # print(lines)
 #
@@ -39,19 +39,19 @@
 #     print(line, end='')
 #
 
-with open("sample.txt", 'r') as jabber:
+with open("sample_python_text_file_in_folder.txt", 'r') as jabber:
     lines = jabber.readlines() #.readlines() reads the entire file and returns each line as a string
 print(lines)
 
 for line in lines[::-1]:
     print(line, end='')
 
-with open("sample.txt", 'r') as jabber:
+with open("sample_python_text_file_in_folder.txt", 'r') as jabber:
     lines = jabber.read()
     #.read() reads the entire file and if it's a text file,
     #it returns a string of the optional text file
 
-for line in lines[::-1]:
+for line in lines[::-1]: # here we are going through each line and printing out each line backwards
     print(line, end='')
 
         
