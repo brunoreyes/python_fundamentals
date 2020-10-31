@@ -49,7 +49,8 @@ with open("imelda3.txt", 'r') as imelda_file:
 imelda = eval(contents)
 
 print(imelda)
-title, artist, year, tracks = imelda #here we are appending each value a name
+title, artist, year, tracks = imelda  #here we are appending each value a name
+# appending adds data to the end of the file without messing with any of the data already in the file
 print(title)
 print(artist)
 print(year)
