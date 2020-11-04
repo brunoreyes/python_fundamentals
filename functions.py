@@ -6,6 +6,7 @@ def python_food():
     
 
 # all python functions return something, if nothing is specified, it will return none
+# functions make code managable
 print(python_food())  #calling the function and printing the output of the function
 
 # def center_text(*args, sep=' ', end='\n', file=None, flush=False):  # parameters refer to the type of input coming in
@@ -49,10 +50,10 @@ def center_text(*args, sep=' '):
 # s5 = centre_text("first", "second", 3, 4, "spam", sep=":")
 # print(s5)
 
-with open("menu", "w") as menu: 
+with open("menu", "w") as menu: # Creating and Writing all of the arguments below into the file 'menu'
     s1 = center_text("spam and eggs")
     print(s1, file=menu)
-    s2 = center_text("spam, spam and eggs")
+    s2 = center_text("spam, spam and eggs") #printing the text, centered within the file 'menu'
     print(s2, file=menu)
     print(center_text(12), file=menu)
     print(center_text("spam, spam, spam and spam"), file=menu)
