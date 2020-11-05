@@ -17,13 +17,18 @@ def parabola(page, size): # a parabola is x^2, eventually coming up with enough 
     # y = x * x / 100 # Making the y value not go off the stream
     # return y
 
-def circle(page, radius, g, h): # plotting out a circle
-    for x in range(g, g + radius):
-        y = h + (math.sqrt(radius ** 2 - ((x - g) ** 2))) 
-        plot(page, x, y)
-        plot(page, x, 2 * h - y)
-        plot(page, 2 * g - x, y)
-        plot(page, 2 * g - x, 2 * h - y)
+# added a color parameter for each circle's line that defaults to red when no value is chosen.
+def circle(page, radius, g, h, color="red"):  # plotting out a circle 
+    page.create_oval( g + radius, h + radius, g - radius, h - radius, outline=color, width=2)
+
+    # for x in range(g * 100, (g + radius) * 100): # multiplying by 100 to do 100 times more calculations
+    #     x /= 100
+    #     print(x)                                # for better circle definition
+    #     y = h + (math.sqrt(radius ** 2 - ((x - g) ** 2)))
+    #     plot(page, x, y)
+    #     plot(page, x, 2 * h - y)
+    #     plot(page, 2 * g - x, y)
+    #     plot(page, 2 * g - x, 2 * h - y)
 
 
 def draw_axes(page): # draw_axes creates the x & y axis lines, page is actually the canvas. 
@@ -59,10 +64,10 @@ draw_axes(canvas)  # calling the function
 parabola(canvas, 100)
 parabola(canvas, 200)
 
-circle(canvas, 100, 100, 100)
-circle(canvas, 100, 100, -100)
-circle(canvas, 100, -100, 100)
-circle(canvas, 100, -100, -100)
+circle(canvas, 100, 100, 100, "green")
+circle(canvas, 100, 100, -100, "yellow")
+circle(canvas, 100, -100, 100, "black")
+circle(canvas, 100, -100, -100, "blue")
 circle(canvas, 10, 30, 30)
 circle(canvas, 10, 30, -30)
 circle(canvas, 10, -30, 30)
