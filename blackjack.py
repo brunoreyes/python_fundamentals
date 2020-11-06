@@ -102,6 +102,12 @@ def deal_player():
     #     result_text.set("Dealer wins!")  # if the player score over 21, they lose the game and dealer wins
     # print(locals())
 
+def initial_deal():
+    deal_player() # Draws the player a card
+    dealer_hand.append(deal_card(dealer_card_frame))  # Deal out the first card for the dealer
+    dealer_score_label.set(score_hand(dealer_hand))
+    deal_player() # Draws another card for the player
+
 def restart_game():
     global player_card_frame
     global dealer_card_frame
@@ -118,18 +124,22 @@ def restart_game():
     player_card_frame = tkinter.Frame(card_frame, background="green")
     player_card_frame.grid(row=2, column=1, sticky="ew", rowspan=2)
 
+    result_text.set("")
+    
     # Create the list to store dealer's & player's hands
     dealer_hand = []
     player_hand = []
-
-    deal_player() # Draws the player a card
-    dealer_hand.append(deal_card(dealer_card_frame))  # Deal out the first card for the dealer
-    dealer_score_label.set(score_hand(dealer_hand))
-    deal_player() # Draws another card for the player
+    initial_deal()
+    
 
 
 def shuffle_deck():
     random.shuffle(deck)
+
+
+def play():
+    initial_deal()
+    mainWindow.mainloop() #loop that runs the game
 
 
 mainWindow = tkinter.Tk()
@@ -187,7 +197,7 @@ shuffle_button.grid(row=0, column=3)  #command sets an action for a button
 #load cards
 cards = []
 load_images(cards)
-print(cards)
+# print(cards)
 
 # Creating a new deck of cards & shuffling them
 # Create a new and separate list prevents issues with cards being dealt and being removed from the list 
@@ -209,5 +219,6 @@ restart_game()
 # dealer_score_label.set(score_hand(dealer_hand))
 # deal_player() # Draws another card for the player
 
-
-mainWindow.mainloop()
+# print(__name__)
+if __name__ == "__main__": # test to see if we are within the right scope
+    play()
