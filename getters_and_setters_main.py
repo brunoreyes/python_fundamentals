@@ -1,4 +1,4 @@
-from getters_and_setters import Player  # Generally not the best practice, but we are placing each class
+from getters_and_setters_player import Player  # Generally not the best practice, but we are placing each class
 # in there individual file, just to show what getters and setters do (same functions as JS)
 
 tim = Player("Tim")

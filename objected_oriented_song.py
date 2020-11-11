@@ -128,7 +128,7 @@ def load_data():
             new_song = Song(song_field, new_artist)
             new_album.add_song(new_song)
 
-    return artist_list
+    return artist_list, 
 
 
 def create_checkfile(artist_list):
