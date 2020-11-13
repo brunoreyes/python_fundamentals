@@ -5,10 +5,13 @@ def getint(prompt):  # getting int from input instead of a string from input
         try:
             number = int(input(prompt))
             return number
-        except ValueError:
-            print("Invalid number entered, please try again")
-        except EOFError:
+        except EOFError: # an instance of exception
             sys.exit(1)
+        except:  # Exception #ValueError: # not all exceptions have to be derived from exception
+            # for instance 'except:' above takes on all exceptions.
+            print("Invalid number entered, please try again")
+        finally: # finally will always execute even if there is an exception
+            print("The final clause always executes") # control + d exits the python session
 
 first_number = getint('input first number ')
 second_number = getint('input second number ')
@@ -16,6 +19,8 @@ second_number = getint('input second number ')
 
 try:
     print("{} divided by {} is {}".format(first_number, second_number, first_number / second_number))
-except ZeroDivisionError:
-    print("What are doing dividing by zero???")
+except ZeroDivisionError: # exceptions are objects and must be derived from the base exception class or subclass
+    print("What are doing dividing by zero???") 
     sys.exit(2)
+finally: # else:  else is intended to not accidentally catch an exception that wasn't raised by the code we're trying to protect. 
+    print("Division preformed successfully")

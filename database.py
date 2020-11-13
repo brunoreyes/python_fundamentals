@@ -26,3 +26,6 @@
 # Column: is another name for field
 
 # A view is a selection of rows and columns, possible from more than one table
+
+# installing a plugin called Database Navigator to view database tables without leaving IntelliJ,
+# which has a great shema
